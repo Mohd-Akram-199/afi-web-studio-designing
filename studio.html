@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AFI WEB STUDIO DESIGNING | Professional Website Designing</title>
+
+<meta name="description" content="AFI Web Studio Designing creates professional, modern and responsive websites for businesses, brands and individuals.">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+background:#070b14;
+color:white;
+line-height:1.6;
+overflow-x:hidden;
+}
+:root{
+--blue:#1685ff;
+--light:#65b4ff;
+}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(7,11,20,.96);
+backdrop-filter:blur(15px);
+border-bottom:1px solid #1b2a42;
+padding:17px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:21px;
+font-weight:900;
+letter-spacing:1px;
+}
+.logo span{color:var(--blue)}
+nav{
+display:flex;
+gap:25px;
+align-items:center;
+}
+nav a{
+font-size:14px;
+color:#c6d1e0;
+}
+nav a:hover{color:var(--light)}
+.menu{
+display:none;
+background:none;
+border:0;
+color:white;
+font-size:27px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+min-height:650px;
+padding:110px 8%;
+display:flex;
+align-items:center;
+background:
+radial-gradient(ellipse at 80% 45%,#102b52 0%,#070b14 55%);
+}
+.hero-content{max-width:750px}
+.tag{
+color:var(--light);
+border:1px solid #23558c;
+padding:8px 16px;
+border-radius:30px;
+display:inline-block;
+font-size:12px;
+letter-spacing:2px;
+margin-bottom:25px;
+}
+h1{
+font-size:clamp(43px,7vw,78px);
+line-height:1.1;
+}
+h1 span{color:var(--blue)}
+.hero p{
+color:#aab7c9;
+font-size:17px;
+max-width:580px;
+margin:24px 0 32px;
+}
+.btn{
+display:inline-block;
+background:var(--blue);
+padding:14px 25px;
+border-radius:7px;
+font-weight:bold;
+margin:5px;
+transition:.3s;
+}
+.btn:hover{
+background:#0061cb;
+transform:translateY(-3px);
+}
+.btn-outline{
+background:transparent;
+border:1px solid var(--blue);
+}
+
+/* COMMON SECTIONS */
+section{padding:85px 8%}
+.heading{
+text-align:center;
+margin-bottom:45px;
+}
+.heading h2{font-size:36px}
+.heading h2 span{color:var(--blue)}
+.heading p{
+color:#93a4bb;
+margin-top:10px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+.card{
+background:linear-gradient(145deg,#101d30,#0b1220);
+border:1px solid #1b3454;
+border-radius:13px;
+padding:28px;
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-7px);
+border-color:var(--blue);
+}
+.symbol{
+font-size:32px;
+margin-bottom:15px;
+}
+.card h3{margin-bottom:10px}
+.card p{
+color:#a5b4c8;
+font-size:14px;
+}
+
+/* ABOUT */
+.about{
+background:#0b1422;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+.about h2{
+font-size:38px;
+margin-bottom:18px;
+}
+.about p{
+color:#aab7c9;
+margin-bottom:15px;
+}
+.about-box{
+background:linear-gradient(135deg,#102c51,#0a1322);
+padding:40px;
+border:1px solid #1b4a7b;
+border-radius:15px;
+text-align:center;
+}
+.about-box strong{
+font-size:55px;
+color:var(--light);
+}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact p{
+color:#aab7c9;
+margin:12px auto 25px;
+}
+.socials{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+.socials a{
+border:1px solid #28517b;
+padding:13px 22px;
+border-radius:8px;
+transition:.3s;
+}
+.socials a:hover{background:#126ed0}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+border-top:1px solid #1b2a42;
+color:#8797aa;
+font-size:13px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#20c76a;
+color:white;
+padding:14px 19px;
+border-radius:40px;
+font-weight:bold;
+z-index:200;
+box-shadow:0 5px 25px #0008;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:800px){
+nav{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+width:100%;
+background:#0b1422;
+padding:25px;
+flex-direction:column;
+}
+nav.show{display:flex}
+.menu{display:block}
+.logo{font-size:16px}
+.hero{
+min-height:570px;
+padding:90px 7%;
+}
+.services{grid-template-columns:1fr}
+.about{grid-template-columns:1fr}
+section{padding:65px 7%}
+.heading h2{font-size:30px}
+.about h2{font-size:31px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="logo">
+AFI <span>WEB STUDIO DESIGNING.</span>
+</div>
+
+<button class="menu"
+onclick="document.querySelector('nav').classList.toggle('show')">
+☰
+</button>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+<div class="hero-content">
+
+<div class="tag">WELCOME TO AFI WEB STUDIO DESIGNING</div>
+
+<h1>
+We Build <span>Websites</span>
+That Grow Your Business.
+</h1>
+
+<p>
+We create modern, professional and responsive websites
+that help businesses build their online presence
+and reach more customers.
+</p>
+
+<a class="btn"
+href="https://wa.me/919258945981?text=Hello%20AFI%20Web%20Studio%20Designing%2C%20I%20want%20a%20website">
+Get Your Website →
+</a>
+
+<a class="btn btn-outline" href="#services">
+Explore Services
+</a>
+
+</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="heading">
+<h2>Our <span>Services</span></h2>
+<p>Creative digital solutions for your business.</p>
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="symbol">🌐</div>
+<h3>Business Websites</h3>
+<p>Professional websites to present your business and attract customers online.</p>
+</div>
+
+<div class="card">
+<div class="symbol">🛒</div>
+<h3>E-Commerce Websites</h3>
+<p>Modern online stores to showcase products and grow your business.</p>
+</div>
+
+<div class="card">
+<div class="symbol">💼</div>
+<h3>Portfolio Websites</h3>
+<p>Beautiful personal portfolios to showcase your skills and work.</p>
+</div>
+
+<div class="card">
+<div class="symbol">📱</div>
+<h3>Responsive Design</h3>
+<p>Websites that work smoothly on mobile, tablet and desktop.</p>
+</div>
+
+<div class="card">
+<div class="symbol">🚀</div>
+<h3>Landing Pages</h3>
+<p>Modern landing pages designed to introduce your services effectively.</p>
+</div>
+
+<div class="card">
+<div class="symbol">🎨</div>
+<h3>Creative Web Design</h3>
+<p>Attractive layouts, modern colours and clean user experiences.</p>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div>
+<h2>
+Why Choose <span style="color:#1685ff">
+AFI Web Studio Designing?
+</span>
+</h2>
+
+<p>We believe every business deserves a strong online presence.</p>
+
+<p>
+Our goal is to create attractive, user-friendly and
+mobile-friendly websites that represent your brand professionally.
+</p>
+
+<p>Have an idea? Let's turn it into a website.</p>
+
+<a class="btn"
+href="https://wa.me/919258945981?text=Hello%2C%20I%20want%20to%20discuss%20a%20website%20project.">
+Let's Talk →
+</a>
+</div>
+
+<div class="about-box">
+<strong>AFI</strong>
+<h2>WE DESIGN. YOU GROW.</h2>
+<p>Creative Ideas. Professional Websites.</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="heading">
+<h2>Let's Build Your <span>Website</span></h2>
+<p>
+Want to take your business online?
+Contact us today!
+</p>
+</div>
+
+<a class="btn"
+href="https://wa.me/919258945981?text=Hello%20AFI%20Web%20Studio%20Designing%2C%20I%20want%20to%20build%20a%20website.">
+Contact on WhatsApp
+</a>
+
+<a class="btn btn-outline"
+href="tel:+919258945981">
+Call Now
+</a>
+
+<div class="socials">
+
+<a href="https://www.youtube.com/@mohd_afi_editor"
+target="_blank" rel="noopener">
+▶ YouTube
+</a>
+
+<a href="https://www.instagram.com/afi.islamic.edits/"
+target="_blank" rel="noopener">
+◎ Instagram
+</a>
+
+<a href="https://wa.me/919258945981"
+target="_blank" rel="noopener">
+WhatsApp
+</a>
+
+</div>
+
+<p>Phone: +91 9258945981</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 AFI WEB STUDIO DESIGNING. All Rights Reserved.</p>
+<p>WE DESIGN. YOU GROW.</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp"
+href="https://wa.me/919258945981?text=Hello%20AFI%20Web%20Studio%20Designing"
+target="_blank" rel="noopener">
+WhatsApp
+</a>
+
+</body>
+</html>
